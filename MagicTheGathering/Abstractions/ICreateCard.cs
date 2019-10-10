@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicTheGathering
 {
-    interface ICreateCard
+    interface ICard
     {
 
     }
