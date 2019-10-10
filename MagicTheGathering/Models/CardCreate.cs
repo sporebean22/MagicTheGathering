@@ -8,19 +8,23 @@ namespace MagicTheGathering
 {
     public abstract class Card : ICard
     {
-        public abstract string ManaCost { get; set; }
+        public Dictionary<TerrainColour, int> ManaCost { get; } = new Dictionary<TerrainColour, int>();
+
+        public string CardName { get; }
                
-        public abstract string CardName { get; set; }
-               
-        public abstract TerrainColour Colour { get; set; }
+        public abstract TerrainColour Colour { get;}
                
         public abstract int Attack { get; set; }
                
         public abstract int Toughness { get; set; }
 
-        public Card(string cardname, TerrainColour colour, int Attack, int Toughness)
+        /*public Card(Dictionary<TerrainColour, int> manacost, string cardname, TerrainColour colour, int attack, int toughness)
         {
-            
-        }
+            ManaCost = manacost;
+            CardName = cardname;
+            Colour = colour;
+            Attack = attack;
+            Toughness = toughness;
+        }*/
     }
 }
