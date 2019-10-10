@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace MagicTheGathering
 {
-    public class Class1
+    public enum Colour
     {
-        public void 
-        {
-            
-        }
+        Blue,
+        Red,
+        Green,
+        White,
+        Black
     }
 }
