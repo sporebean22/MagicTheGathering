@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicTheGathering
 {
-    public class CreateCard : ICreateCard
+    public class Card : ICard
     {
         public virtual string ManaCost { get; set; }
 
@@ -14,13 +14,9 @@ namespace MagicTheGathering
 
         public virtual Colour Colour { get; set; }
 
-        public virtual int Attack { get; set; }
+        public virtual int? Attack { get; set; }
 
-        public virtual int Toughness { get; set; }
+        public virtual int? Toughness { get; set; }
 
-        public CreateCard(string cardname, Colour colour, int Attack, int Toughness)
-        {
-            
-        }
     }
 }
