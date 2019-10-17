@@ -5,7 +5,7 @@ namespace MagicTheGathering
   class Monster : Card
   {
 
-    public Static readonly string CardType {get; set;} = "Monster Card";
+    public static const string _cardType = "Monster Card";
 
     public Monster(string manaCost, string cardName, Colour colour, int attack, int toughness)
     {
