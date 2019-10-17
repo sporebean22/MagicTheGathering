@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MagicTheGathering.Models
 {
-    class GraveyardManagement
+    class Graveyard
     {
+
     }
 }

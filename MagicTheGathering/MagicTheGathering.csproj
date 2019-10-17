@@ -125,6 +125,7 @@
     <Compile Include="Abstractions\ICreateCard.cs" />
     <Compile Include="Models\GraveyardManagement.cs" />
     <Compile Include="Models\ManaPool.cs" />
+    <Compile Include="Models\Monster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
