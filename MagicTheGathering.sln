@@ -5,13 +5,7 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicTheGathering", "MagicTheGathering\MagicTheGathering.csproj", "{0DC5E971-0686-465A-8E07-E6738085D9E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicVisioTests", "MagicVisio\MagicVisioTests.csproj", "{EB2F3AA2-5C4E-4760-8C19-26ACD399CC04}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E485213C-4CBB-4031-9B60-634C4FF33B82}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{15DFA971-34BA-4D3A-A316-DB89C405CB9D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{06C89557-DBDA-458F-8891-F91D6DDCD376}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicVisio", "MagicVisio\MagicVisio.csproj", "{EB2F3AA2-5C4E-4760-8C19-26ACD399CC04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +24,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0DC5E971-0686-465A-8E07-E6738085D9E5} = {E485213C-4CBB-4031-9B60-634C4FF33B82}
-		{EB2F3AA2-5C4E-4760-8C19-26ACD399CC04} = {06C89557-DBDA-458F-8891-F91D6DDCD376}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {979C4A0E-0EA3-419C-9D6C-398F566E693B}

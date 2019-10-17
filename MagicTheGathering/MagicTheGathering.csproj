@@ -11,7 +11,6 @@
   <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <GenerateProgramFile>false</GenerateProgramFile>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0DC5E971-0686-465A-8E07-E6738085D9E5}</ProjectGuid>
@@ -120,19 +119,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CardCreate.cs" />
-    <Compile Include="Models\Colour.cs" />
-    <Compile Include="Abstractions\ICreateCard.cs" />
+    <Compile Include="CardCreate.cs" />
+    <Compile Include="Colour.cs" />
+    <Compile Include="ICreateCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Important Files\app.config" />
-    <None Include="Important Files\packages.config" />
-    <None Include="Important Files\runtests.cmd" />
-    <None Include="Important Files\SpecRunTestProfile.xsd">
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="runtests.cmd" />
+    <None Include="SpecRunTestProfile.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Important Files\SpecRunTestProfile_2011_09.xsd">
+    <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

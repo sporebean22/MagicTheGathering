@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace MagicTheGathering
 {
-    public enum TerrainColour
+    public enum Colour
     {
-        Colourless,
         Blue,
         Red,
         Green,
