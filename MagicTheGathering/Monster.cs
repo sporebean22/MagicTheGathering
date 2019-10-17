@@ -7,6 +7,12 @@ namespace MagicTheGathering
 
     public static const string _cardType = "Monster Card";
 
+    public virtual string Subtype {get; set;}
+
+    public virtual int? Attack { get; set; }
+
+    public virtual int? Toughness { get; set; }
+
     public Monster(string manaCost, string cardName, Colour colour, int attack, int toughness)
     {
         ManaCost = manacost;
@@ -16,7 +22,7 @@ namespace MagicTheGathering
         Toughness = toughness;
     }
 
-    public DamageOutput Attack()
+    public DamageOutput Attack(Target target)
     {
 
     }

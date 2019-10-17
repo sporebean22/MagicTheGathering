@@ -18,5 +18,20 @@ namespace MagicTheGathering
 
         public virtual int? Toughness { get; set; }
 
+        public Card
+        (
+          string manaCost,
+          string cardName,
+          Colour colour,
+          int attack,
+          int toughness
+        )
+        {
+          Manacost = manaCost ?? throw new ArgumentNullException(nameof(manaCost));
+          CardName = cardName ?? throw new ArgumentNullException(nameof(cardName));
+          Colour = colour ?? throw new ArgumentNullException(nameof(colour));
+          Attack = attack ?? throw new ArgumentNullException(nameof(attack));
+          Toughness = tougness ?? throw new ArgumentNullException(nameof(tougness));
+        }
     }
 }
