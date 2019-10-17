@@ -123,6 +123,8 @@
     <Compile Include="Models\CardCreate.cs" />
     <Compile Include="Models\Colour.cs" />
     <Compile Include="Abstractions\ICreateCard.cs" />
+    <Compile Include="Models\GraveyardManagement.cs" />
+    <Compile Include="Models\ManaPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
