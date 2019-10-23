@@ -120,14 +120,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CardCreate.cs" />
+    <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Colour.cs" />
     <Compile Include="Abstractions\ICreateCard.cs" />
     <Compile Include="Models\GraveyardManagement.cs" />
+    <Compile Include="Models\Instants.cs" />
     <Compile Include="Models\ManaPool.cs" />
+    <Compile Include="Models\Spells\Effect.cs" />
+    <Compile Include="Models\Spells\Sorceries.cs" />
+    <Compile Include="Models\Spells\Spell.cs" />
+    <Compile Include="Models\Monster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Spells\Target.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="appsettings.json" />
     <None Include="Important Files\app.config" />
     <None Include="Important Files\packages.config" />
     <None Include="Important Files\runtests.cmd" />
@@ -137,9 +144,13 @@
     <None Include="Important Files\SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="obj\Debug\MagicTheGathering.csprojAssemblyReference.cache" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
