@@ -1,13 +1,14 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicTheGathering.Models
 {
-    class Graveyard
+    class Graveyard : IGraveYard
     {
+        public static Dictionary<Card, int> GraveyardStore { get; } = new Dictionary<Card, int>();
+
+        //public static void addtograveryard(Card card)
+
 
     }
 }

@@ -12,11 +12,7 @@ namespace MagicTheGathering.Models
 
         public static void Cast(Dictionary<TerrainColour, int> manaCost)
         {
-            foreach (var manaPair in Mana)
-            {
-                var key = manaPair.Key;
-                Mana[key] -= manaCost[key];
-            } 
+
         }
 
         public static Dictionary<TerrainColour, int> GetMana()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MagicTheGathering
 {
-    public abstract class Card : ICard
+    public abstract class Card
     {
         public Dictionary<TerrainColour, int> ManaCost { get; } = new Dictionary<TerrainColour, int>();
 

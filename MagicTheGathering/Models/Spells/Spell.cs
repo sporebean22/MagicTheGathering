@@ -12,9 +12,10 @@ namespace MagicTheGathering.Models
 
         public Func<Effect> Effect { get; set; }
 
-        public Spell(Func<Effect> effect, Dictionary<TerrainColour, int> manacost, string cardName, TerrainColour terrainColour) : base(manacost, cardName, terrainColour)
-        { 
-            
+        public Spell(Func<Effect> effect, Dictionary<TerrainColour, int> manaCost, string cardName, TerrainColour terrainColour) : base(manaCost, cardName, terrainColour)
+        {
+            Effect = effect;
+            Console.WriteLine(Narrator.NarrateSpellBasic(CardType, CardName, manaCost));
         }
     }
 }
