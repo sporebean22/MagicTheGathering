@@ -10,11 +10,11 @@ namespace MagicTheGathering.Models
     {
         public override string CardType { get; } = "Spell";
 
-        public Func<Effect> Effect { get; set; }
+        public static Delegate SpellEffect { get; set; }
 
-        public Spell(Func<Effect> effect, Dictionary<TerrainColour, int> manaCost, string cardName, TerrainColour terrainColour) : base(manaCost, cardName, terrainColour)
+        public Spell(Delegate effect, Dictionary<TerrainColour, int> manaCost, string cardName, TerrainColour terrainColour) : base(manaCost, cardName, terrainColour)
         {
-            Effect = effect;
+            SpellEffect = effect;
             Console.WriteLine(Narrator.NarrateSpellBasic(CardType, CardName, manaCost));
         }
     }

@@ -124,9 +124,14 @@
     <Compile Include="Models\Colour.cs" />
     <Compile Include="Abstractions\ICreateCard.cs" />
     <Compile Include="Models\GraveyardManagement.cs" />
+    <Compile Include="Models\IGraveYard.cs" />
     <Compile Include="Models\Instants.cs" />
     <Compile Include="Models\ManaPool.cs" />
+    <Compile Include="Models\MonsterTypes.cs" />
+    <Compile Include="Models\Sorceries.cs" />
     <Compile Include="Models\Spells\Effect.cs" />
+    <Compile Include="Models\Spells\HP.cs" />
+    <Compile Include="Models\Spells\Narrator.cs" />
     <Compile Include="Models\Spells\Sorceries.cs" />
     <Compile Include="Models\Spells\Spell.cs" />
     <Compile Include="Models\Monster.cs" />

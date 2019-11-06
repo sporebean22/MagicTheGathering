@@ -1,31 +1,27 @@
-﻿using System;
-using TechTalk.SpecFlow;
-using MagicTheGathering.Models;
-
+﻿using TechTalk.SpecFlow;
+using System;
 
 namespace MagicVisioTests
 {
-    
-
     [Binding]
     public class MagicManaTestsSteps
     {
         [Given(@"I have Started a Game")]
         public void GivenIHaveStartedAGame()
         {
-            Game.Start();
+            throw new NotImplementedException();
         }
         
         [When(@"I Add '(.*)' '(.*)' Mana into the Mana Pool")]
         public void WhenIAddManaIntoTheManaPool(int p0, string p1)
         {
-            ScenarioContext.Current.Pending();
+            throw new NotImplementedException();
         }
         
         [Then(@"the Mana Request Response Should look like:")]
         public void ThenTheManaRequestResponseShouldLookLike(Table table)
         {
-            ScenarioContext.Current.Pending();
+            throw new NotImplementedException();
         }
     }
 }
