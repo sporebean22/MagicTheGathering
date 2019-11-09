@@ -10,16 +10,14 @@ namespace MagicTheGathering.Models
 
         public static Func<Card, string> POP = (card) => card.Destroy(1);
 
-        public static Func<Effect, string> Negate = (effect) => effect.Negation();
+        public static Func<Effect, string> Negate = (effect) => Negation(effect);
 
-        private Func<Spell> DoNothing = (effect1) => (effect1);
+        private static Func<string, string> DoNothing = (effect1) => "Hi";
 
-        private string Negation(this Effect effect)
+        private static string Negation(Effect effect)
         {
-            Spell.SpellEffect = 
-
-                return "3";
+            Spell.SpellEffect = DoNothing;
+            return $"Effect {effect} has been Negated";
         }
-            
     }
 }

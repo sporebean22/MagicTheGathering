@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MagicTheGathering.Models
 {
-    static class Graveyard : IGraveYard
+    static class Graveyard
     {
         public static readonly ArgumentException CannotDestroyException = new ArgumentException("This Card Cannot be Destroyed");
         public static Dictionary<Card, int> GraveyardStore { get; } = new Dictionary<Card, int>();
