@@ -11,9 +11,23 @@ namespace MTGGame
         public static void Main()   
         {
             Console.WriteLine(narrator.GameBegin());
-            Dictionary<TerrainColour, int> test = new Dictionary<TerrainColour, int>();
-            Monster monster = new Monster(test, "BasicMonster1", TerrainColour.Red, 5,5);
+            Dictionary<TerrainColour, int> IronForgeManaCost = new Dictionary<TerrainColour, int>();
+            Monster monster = new Monster(IronForgeManaCost, "Dragon of the Iron Forge", MonsterType.Dragon ,TerrainColour.Red, 5,5);
             Console.WriteLine(narrator.NarrateBasicMonster(monster)); 
+        }
+    }
+
+    public sealed class Cast
+    {
+        public Monster Monster { get; set; }
+        public Spell Spell { get; set; }
+        public Instant Instant { get; set; }
+        public Sorcery Sorcery { get; set; }
+
+        public Cast(Monster monster)
+        {
+            Monster = monster;
+
         }
     }
 }

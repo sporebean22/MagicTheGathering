@@ -11,7 +11,7 @@ namespace MagicTheGathering.Models
         public string NarrateSpellBasic(TerrainColour terrainColour, string cardName, Dictionary<TerrainColour,int> manaCost)
             =>  $"The {terrainColour}, {cardName} Has been Cast! with a ManaCost of: {manaCost}.";
         public string NarrateBasicMonster(Monster monster)
-            =>  $"The {monster.TerrainColour}, {monster.CardName} Has been Cast! with a ManaCost of: {monster.ManaCost}.";
+            =>  $"The {monster.TerrainColour} {monster.MonsterType}, {monster.CardName} Has been Cast! with a ManaCost of: {monster.ManaCost}.";
 
         public Narrator() { }
 

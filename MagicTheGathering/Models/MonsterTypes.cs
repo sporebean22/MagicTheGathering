@@ -1,6 +1,6 @@
 ﻿namespace MagicTheGathering.Models
 {
-    public enum MonsterTypes
+    public enum MonsterType
     {
         Dragon,
         Warrior,
