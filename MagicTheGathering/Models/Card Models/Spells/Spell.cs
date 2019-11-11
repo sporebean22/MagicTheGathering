@@ -8,6 +8,7 @@ namespace MagicTheGathering.Models
 {
     public abstract class Spell : Card
     {
+        private INarrator narrator;
         public static Delegate SpellEffect { get; set; }
 
         public Spell(Delegate effect, Dictionary<TerrainColour, int> manaCost, string cardName, TerrainColour terrainColour) : base(manaCost, cardName, terrainColour)
@@ -16,7 +17,7 @@ namespace MagicTheGathering.Models
             ManaCost = manaCost;
             CardName = cardName;
             TerrainColour = terrainColour;
-            Console.WriteLine(Narrator.NarrateSpellBasic(CardName, manaCost));
+            Console.WriteLine(narrator.NarrateSpellBasic(terrainColour, cardName, manaCost));
         }
     }
 }
