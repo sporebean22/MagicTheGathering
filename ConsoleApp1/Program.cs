@@ -17,17 +17,19 @@ namespace MTGGame
         }
     }
 
-    public sealed class Cast
+    public sealed class Game
     {
         public Monster Monster { get; set; }
         public Spell Spell { get; set; }
         public Instant Instant { get; set; }
         public Sorcery Sorcery { get; set; }
 
-        public Cast(Monster monster)
+        public void Cast(Monster monster)
         {
             Monster = monster;
-
         }
+
+        public void GetHand()
+        { }
     }
 }
