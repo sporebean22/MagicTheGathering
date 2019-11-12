@@ -10,9 +10,9 @@ namespace MagicTheGathering.Models
     {
         public static Dictionary<TerrainColour, int> Mana { get; set; } = new Dictionary<TerrainColour, int>();
 
-        public static Task Cast(Dictionary<TerrainColour, int> manaCost)
+        public static void Cast()
         {
-            return Mana.Remove();
+
         }
 
         public static Dictionary<TerrainColour, int> GetMana()
