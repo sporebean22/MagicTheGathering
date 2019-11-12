@@ -14,9 +14,19 @@ namespace MagicTheGathering.Models
 
         private static Func<string, string> DoNothing { get; } = (effect1) => "This is a Placeholder Effect";
 
+        private static Func<Target, string> Trample { get; } = (target) => "work on this";
+        
+        private static Func<Target, string> Flying { get; } = (target) => "work on this";
+        
+        private static Func<Target, string> Haste { get; } = (target) => "work on this";
+            
+        private static Func<Target, string> Hexproof { get; } = (target) => "work on this";
+            
+        private static Func<Target, string> Indestructible { get; } = (target) => "work on this";
+        
         private static string Negation(Effect effect)
         {
-            Spell.SpellEffect = DoNothing;
+            effect = DoNothing;
             return $"Effect {effect} has been Negated";
         }
     }
