@@ -11,8 +11,8 @@ namespace MTGGame
         public static void Main()   
         {
             Console.WriteLine(narrator.GameBegin());
-            Dictionary<TerrainColour, int> IronForgeManaCost = new Dictionary<TerrainColour, int>();
-            Monster monster = new Monster(IronForgeManaCost, "Dragon of the Iron Forge", MonsterType.Dragon ,TerrainColour.Red, 5,5);
+            var IronForgeManaCost = new Dictionary<TerrainColour, int>();
+            var monster = new Monster(IronForgeManaCost, "Dragon of the Iron Forge", MonsterType.Dragon ,TerrainColour.Red, 5,5);
             Console.WriteLine(narrator.NarrateBasicMonster(monster)); 
         }
     }
