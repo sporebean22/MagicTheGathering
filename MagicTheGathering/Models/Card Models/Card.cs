@@ -8,9 +8,9 @@ namespace MagicTheGathering
     {
         public Dictionary<TerrainColour, int> ManaCost { get; set; } = new Dictionary<TerrainColour, int>();
 
-        public string CardName { get; set; }
+        public abstract string CardName { get; set; }
 
-        public TerrainColour TerrainColour { get; set; }
+        public abstract TerrainColour TerrainColour { get; set; }
 
         public Card(Dictionary<TerrainColour, int> manacost, string cardname, TerrainColour terrainColour)
         {
