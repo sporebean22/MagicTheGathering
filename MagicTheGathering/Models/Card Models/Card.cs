@@ -1,9 +1,10 @@
 ﻿using System;
+using MagicTheGathering.Models.Card_Models;
 using System.Collections.Generic;
 
 namespace MagicTheGathering
 {
-    public abstract class Card
+    public abstract class Card : Permanent
     {
         public Dictionary<TerrainColour, int> ManaCost { get; set; } = new Dictionary<TerrainColour, int>();
 

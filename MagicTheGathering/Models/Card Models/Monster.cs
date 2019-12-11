@@ -28,5 +28,11 @@ namespace MagicTheGathering
             Toughness = toughness;
             Effect = effect;
         }
+
+        public int MonsterAttack(Monster attackingMonster, Monster enemyMonster)
+            =>  RecieveMonsterDamage(attackingMonster.Attack, enemyMonster);
+
+        public int RecieveMonsterDamage(int attack, Monster monster)
+            =>  monster.Toughness -= attack;
     }
 }

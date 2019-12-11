@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Card Models\Card.cs" />
+    <Compile Include="Models\Card Models\Permanent.cs" />
     <Compile Include="Models\Colour.cs" />
     <Compile Include="Models\GraveyardManagement.cs" />
     <Compile Include="Models\Narrator\INarrator.cs" />
