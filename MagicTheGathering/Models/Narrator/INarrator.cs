@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MTGGame;
+using System.Collections.Generic;
 
 namespace MagicTheGathering.Models
 {
@@ -8,5 +9,6 @@ namespace MagicTheGathering.Models
         string NarrateSpellBasic(Spell spell);
         string NarrateSpellBasic(TerrainColour terrainColour, string cardName, Dictionary<TerrainColour, int> manaCost);
         string NarrateBasicMonster(Monster monster);
+        string GameStart(List<Player> players);
     }
 }
