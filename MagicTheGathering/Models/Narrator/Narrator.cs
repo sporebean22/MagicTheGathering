@@ -29,6 +29,10 @@ namespace MagicTheGathering.Models
             {
                 return text.Append(player.Name).ToString();
             }
+            =>  $"The {monster.TerrainColour} {monster.MonsterType}, {monster.CardName} Has been Cast! with a ManaCost of: {monster.ManaCost}.";
+        public string NarrateCardCast(Card card)
+            => $"The Card {card.CardName} has been Cast! with a Manacost of {TranslateDictionary(card.ManaCost)}";
+        public Narrator() { }
 
             return text.Append("may the Game Begin!").ToString();
         }
