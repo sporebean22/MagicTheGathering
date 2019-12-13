@@ -19,17 +19,5 @@ namespace MagicTheGathering.Models
         {
             return Mana;
         }
-
-        public static string TranslateDictionary()
-        {
-            var ManaString = new StringBuilder();
-
-            for (TerrainColour i in foreach( int j in Enum.GetValues(typeof(TerrainColour))); i != Mana.Count; i++)
-            {
-                var test = Mana[i];
-                ManaString.Append("/n ");
-            }
-        }
-
     }
 }

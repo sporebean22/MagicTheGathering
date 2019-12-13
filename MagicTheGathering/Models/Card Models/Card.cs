@@ -18,5 +18,8 @@ namespace MagicTheGathering
             CardName = cardname ?? throw new ArgumentNullException(nameof(cardname));
             TerrainColour = terrainColour;
         }
+
+        public 
+
     }
 }

@@ -21,20 +21,54 @@ namespace MagicTheGathering.Models
             => $"The {terrainColour}, {cardName} Has been Cast! with a ManaCost of: {manaCost}.";
         public string NarrateBasicMonster(Monster monster)
             => $"The {monster.TerrainColour} {monster.MonsterType}, {monster.CardName} Has been Cast! with a ManaCost of: {monster.ManaCost}.";
+
+        public string NarrateCardCast(Card card)
+        {
+            return $"The Card {card.CardName} has been Cast! with a Manacost of {TranslateMana(card)}";
+        }
+
+        public string TranslateMana( Card card)
+        {
+            var manaSummary = new StringBuilder();
+
+            foreach (KeyValuePair<TerrainColour, int> terrainColour in card.ManaCost)
+            {
+                manaSummary.Append($"{terrainColour.Key}: {terrainColour.Value}");
+            }
+
+            return String.Join(", ", card.ManaCost.Select(pair => $"{pair.Key}: {pair.Value}"));
+            //return manaSummary.ToString();
+        }
+
         public String GameStart(List<Player> players)
         {
-            var text = new StringBuilder($"The Game has Started! The Players are: ");
+            var gameStartMessage = new StringBuilder($"The Game has Started! The Players are: ");
 
             foreach (Player player in players)
             {
-                return text.Append(player.Name).ToString();
+                return gameStartMessage.Append(player.Name).ToString();
             }
-            =>  $"The {monster.TerrainColour} {monster.MonsterType}, {monster.CardName} Has been Cast! with a ManaCost of: {monster.ManaCost}.";
-        public string NarrateCardCast(Card card)
-            => $"The Card {card.CardName} has been Cast! with a Manacost of {TranslateDictionary(card.ManaCost)}";
-        public Narrator() { }
 
-            return text.Append("may the Game Begin!").ToString();
+            return gameStartMessage.Append("may the Game Begin!").ToString();
         }
+
+        /*public string narrateDeck(<Player> Players)
+        {
+            var DeckList = new StringBuilder();
+
+            foreach (var player in Players)
+            {
+                foreach (var card in player.Deck)
+                {
+                    return DeckList.Append($"Card Name: {j.CardName}" +
+                                           $"Mana Colour: {j.TerrainColour}" +
+                                           $"Mana Cost: {j.ManaCost}").ToString();
+                }
+            }
+
+            return "No Players";
+
+        }*/
+
     }
 }
