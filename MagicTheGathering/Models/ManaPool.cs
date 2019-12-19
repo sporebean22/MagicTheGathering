@@ -12,10 +12,21 @@ namespace MagicTheGathering.Models
 
         public static void Cast(Dictionary<TerrainColour, int> manaCost)
         {
-            foreach (KeyValuePair<TerrainColour, int> manaCostIndex in manaCost)
+            foreach (KeyValuePair<TerrainColour, int> manaPair in manaCost)
             {
-                manaCostIndex.Value - Mana.Values;
+                Mana[manaPair.Key] =- manaPair.Value;
             }
+
+            //Mana = Mana.Select(manaPair => Mana[manaPair.Key] - manaPair.Value));
+        }
+
+        //private static KeyValuePair<TerrainColour, int> DeductMana(KeyValuePair<TerrainColour, int> manaPair)
+        //{
+        //    var a = Mana[manaPair.Key] - manaPair.Value;
+        //    return new KeyValuePair<TerrainColour, int>
+        //    {
+        //        {manaPair.Key, a }
+        //    }
         }
     }
 }

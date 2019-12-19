@@ -1,5 +1,6 @@
 ﻿using MagicTheGathering.Models;
 using MTGGame;
+using System;
 using System.Collections.Generic;
 
 public sealed partial class Game
@@ -19,18 +20,47 @@ public sealed partial class Game
 
         while (true)
         {
-            foreach (TurnTypes turn in turnTypes)
+            foreach (Player player in Players)
             {
                 Untap();
                 Draw();
-
+                MainPhase1();
+                Combat();
+                MainPhase2();
+                EndPhase();
             }
         }
+    }
+
+    private void EndPhase()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void MainPhase2()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void MainPhase1()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void Combat()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void Untap()
+    {
+        throw new NotImplementedException();
     }
 
     public void Draw() { }
     public void DetermineFirstPlayer() { }
     public void Shuffle() { }
+
 
     public Player TurnManagement()
     {

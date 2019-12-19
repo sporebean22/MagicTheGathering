@@ -18,7 +18,7 @@ namespace MagicTheGathering.Models
 
         public void CastEffect()
         {
-            SpellEffect();
+            SpellEffect.DynamicInvoke();
         }
     }
 }
