@@ -1,12 +1,13 @@
 ﻿public sealed partial class Game
-    {
+{
     enum TurnTypes
-        {
-            EP,
-            SP,
-            BP,
-            DP
-        }
-        
+    {
+        UntapPhase,
+        UpkeepPhase,
+        DrawPhase,
+        MainPhase1,
+        CombatPhase,
+        MainPhase2,
+        EndPhase
     }
 }

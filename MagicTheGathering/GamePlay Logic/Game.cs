@@ -8,8 +8,9 @@ public sealed partial class Game
 {
     private readonly INarrator _narrator;
     public List<Player> Players { get; set; } = new List<Player>();
+    private TurnTypes[] turnTypes = {TurnTypes.UntapPhase, TurnTypes.UpkeepPhase, TurnTypes.DrawPhase, TurnTypes.MainPhase1, TurnTypes.CombatPhase, TurnTypes.MainPhase2, TurnTypes.EndPhase };
 
-    public Game(Player[] players)
+    public Game(List<Player> players)
     {
         Players = players;
     }
@@ -34,10 +35,6 @@ public sealed partial class Game
         {
 
         }
-
     }
-
-
-
 }
 
