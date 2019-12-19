@@ -6,6 +6,7 @@ namespace MagicTheGathering
 {
     public class Monster : Card
     {
+        private Narrator _narrator;
         public int Attack { get; set; }
         public int Toughness { get; set; }
         public MonsterType MonsterType { get; set; }
@@ -18,6 +19,7 @@ namespace MagicTheGathering
             MonsterType = monsterType;
             Attack = attack;
             Toughness = toughness;
+            Console.WriteLine(_narrator.NarrateBasicMonster(this));
         }
 
         public Monster(Effect effect, Dictionary<TerrainColour, int> manaCost, string cardName, TerrainColour terrainColour, int attack, int toughness) : base(manaCost, cardName, terrainColour)
@@ -27,6 +29,7 @@ namespace MagicTheGathering
             Attack = attack;
             Toughness = toughness;
             Effect = effect;
+            Console.WriteLine(_narrator.NarrateBasicMonster(this));
         }
 
         public int MonsterAttack(Monster attackingMonster, Monster enemyMonster)

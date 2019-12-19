@@ -1,14 +1,12 @@
-﻿using MagicTheGathering;
-using MagicTheGathering.Models;
+﻿using MagicTheGathering.Models;
 using MTGGame;
 using System.Collections.Generic;
-using System.Text;
 
 public sealed partial class Game
 {
     private readonly INarrator _narrator;
     public List<Player> Players { get; set; } = new List<Player>();
-    private TurnTypes[] turnTypes = {TurnTypes.UntapPhase, TurnTypes.UpkeepPhase, TurnTypes.DrawPhase, TurnTypes.MainPhase1, TurnTypes.CombatPhase, TurnTypes.MainPhase2, TurnTypes.EndPhase };
+    private TurnTypes[] turnTypes = { TurnTypes.UntapPhase, TurnTypes.DrawPhase, TurnTypes.MainPhase1, TurnTypes.CombatPhase, TurnTypes.MainPhase2, TurnTypes.EndPhase };
 
     public Game(List<Player> players)
     {
@@ -21,7 +19,12 @@ public sealed partial class Game
 
         while (true)
         {
+            foreach (TurnTypes turn in turnTypes)
+            {
+                Untap();
+                Draw();
 
+            }
         }
     }
 
@@ -37,4 +40,3 @@ public sealed partial class Game
         }
     }
 }
-

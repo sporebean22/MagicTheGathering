@@ -3,7 +3,6 @@
     enum TurnTypes
     {
         UntapPhase,
-        UpkeepPhase,
         DrawPhase,
         MainPhase1,
         CombatPhase,

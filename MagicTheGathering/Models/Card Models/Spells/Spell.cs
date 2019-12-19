@@ -17,7 +17,7 @@ namespace MagicTheGathering.Models
             ManaCost = manaCost;
             CardName = cardName;
             TerrainColour = terrainColour;
-            Console.WriteLine(narrator.NarrateSpellBasic(terrainColour, cardName, manaCost));
+            Console.WriteLine(narrator.NarrateSpellBasic(this));
         }
     }
 }
