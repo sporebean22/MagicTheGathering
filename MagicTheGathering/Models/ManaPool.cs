@@ -10,14 +10,12 @@ namespace MagicTheGathering.Models
     {
         public static Dictionary<TerrainColour, int> Mana { get; set; } = new Dictionary<TerrainColour, int>();
 
-        public static void Cast()
+        public static void Cast(Dictionary<TerrainColour, int> manaCost)
         {
-
-        }
-
-        public static Dictionary<TerrainColour, int> GetMana()
-        {
-            return Mana;
+            foreach (KeyValuePair<TerrainColour, int> manaCostIndex in manaCost)
+            {
+                manaCostIndex.Value - Mana.Values;
+            }
         }
     }
 }

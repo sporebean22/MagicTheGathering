@@ -37,7 +37,6 @@ namespace MagicTheGathering.Models
             }
 
             return String.Join(", ", card.ManaCost.Select(pair => $"{pair.Key}: {pair.Value}"));
-            //return manaSummary.ToString();
         }
 
         public String GameStart(List<Player> players)
@@ -51,24 +50,5 @@ namespace MagicTheGathering.Models
 
             return gameStartMessage.Append("may the Game Begin!").ToString();
         }
-
-        /*public string narrateDeck(<Player> Players)
-        {
-            var DeckList = new StringBuilder();
-
-            foreach (var player in Players)
-            {
-                foreach (var card in player.Deck)
-                {
-                    return DeckList.Append($"Card Name: {j.CardName}" +
-                                           $"Mana Colour: {j.TerrainColour}" +
-                                           $"Mana Cost: {j.ManaCost}").ToString();
-                }
-            }
-
-            return "No Players";
-
-        }*/
-
     }
 }

@@ -21,6 +21,9 @@ namespace MTGGame
         {
             //Deck will need to be shuffled
             for ()
+            {
+
+            }
         }
     }
 }
