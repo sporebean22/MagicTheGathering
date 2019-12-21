@@ -24,7 +24,7 @@ namespace MagicTheGathering.Models
         public string NarrateCardCast(Card card)
             => $"The Card {card.CardName} has been Cast! with a Manacost of {TranslateMana(card)}";
 
-        public string TranslateMana( Card card)
+        public string TranslateMana(Card card)
         {
             var manaSummary = new StringBuilder();
 
@@ -36,7 +36,7 @@ namespace MagicTheGathering.Models
             return String.Join(", ", card.ManaCost.Select(pair => $"{pair.Key}: {pair.Value}"));
         }
 
-        public String GameStart(List<Player> players)
+        public string GameStart(List<Player> players)
         {
             var gameStartMessage = new StringBuilder($"The Game has Started! The Players are: ");
 

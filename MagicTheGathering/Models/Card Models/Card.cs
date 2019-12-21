@@ -6,7 +6,7 @@ namespace MagicTheGathering
 {
     public abstract class Card : Permanent
     {
-        public Dictionary<TerrainColour, int> ManaCost { get; set; } = new Dictionary<TerrainColour, int>();
+        public abstract Dictionary<TerrainColour, int> ManaCost { get; set; }
 
         public abstract string CardName { get; set; }
 

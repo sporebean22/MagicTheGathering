@@ -1,13 +1,12 @@
-﻿using MagicTheGathering.Models;
+﻿using MagicTheGathering;
+using MagicTheGathering.Models;
 using MTGGame;
-using System;
 using System.Collections.Generic;
 
 public sealed partial class Game
 {
     private readonly INarrator _narrator;
     public List<Player> Players { get; set; } = new List<Player>();
-    private TurnTypes[] turnTypes = { TurnTypes.UntapPhase, TurnTypes.DrawPhase, TurnTypes.MainPhase1, TurnTypes.CombatPhase, TurnTypes.MainPhase2, TurnTypes.EndPhase };
 
     public Game(List<Player> players)
     {
@@ -18,12 +17,19 @@ public sealed partial class Game
     {
         _narrator.GameStart(Players);
 
+        foreach (Player player in Players)
+        {
+            player.Shuffle();
+            player.Draw(5);
+            DeterminePlayers();
+        }
+
         while (true)
         {
             foreach (Player player in Players)
             {
                 Untap();
-                Draw();
+                player.Draw(1);
                 MainPhase1();
                 Combat();
                 MainPhase2();
@@ -32,41 +38,34 @@ public sealed partial class Game
         }
     }
 
-    private void EndPhase()
+    private TurnType EndPhase()
     {
-        throw new NotImplementedException();
+        return TurnType.EndPhase;
     }
 
-    private void MainPhase2()
+    private TurnType MainPhase2()
     {
-        throw new NotImplementedException();
+        return TurnType.MainPhase2;
     }
 
-    private void MainPhase1()
+    private TurnType MainPhase1()
     {
-        throw new NotImplementedException();
+        return TurnType.MainPhase1;
     }
 
-    private void Combat()
+    private TurnType Combat()
     {
-        throw new NotImplementedException();
+        return TurnType.CombatPhase;
     }
 
-    private void Untap()
+    private TurnType Untap()
     {
-        throw new NotImplementedException();
+        return TurnType.UntapPhase;
     }
 
-    public void Draw() { }
-    public void DetermineFirstPlayer() { }
-    public void Shuffle() { }
 
-
-    public Player TurnManagement()
-    {
-        while (true)
-        {
-
-        }
+    public void DeterminePlayers() 
+    { 
+        
     }
 }

@@ -1,6 +1,6 @@
 ﻿public sealed partial class Game
 {
-    enum TurnTypes
+    enum TurnType
     {
         UntapPhase,
         DrawPhase,

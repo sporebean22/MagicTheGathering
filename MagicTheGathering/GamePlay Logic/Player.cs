@@ -1,6 +1,5 @@
 ﻿using MagicTheGathering;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MTGGame
 {
@@ -17,13 +16,20 @@ namespace MTGGame
             LifePoints = lifepoints;
         }
 
-        public List<Card> GetHand()
+        public Card[] Draw(int cardsToDraw)
         {
-            //Deck will need to be shuffled
-            for ()
+            var cardsDrawn = new Card[cardsToDraw];
+            for (int cardIndex = 0; cardIndex < cardsToDraw; cardIndex++)
             {
-
+                cardsDrawn.SetValue(Deck[cardIndex], cardIndex);
             }
+
+            return cardsDrawn;
+        }
+
+        public void Shuffle()
+        {
+
         }
     }
 }

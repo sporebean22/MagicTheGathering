@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MagicTheGathering.Models
 {
@@ -14,19 +10,10 @@ namespace MagicTheGathering.Models
         {
             foreach (KeyValuePair<TerrainColour, int> manaPair in manaCost)
             {
-                Mana[manaPair.Key] =- manaPair.Value;
+                Mana[manaPair.Key] = -manaPair.Value;
             }
 
             //Mana = Mana.Select(manaPair => Mana[manaPair.Key] - manaPair.Value));
-        }
-
-        //private static KeyValuePair<TerrainColour, int> DeductMana(KeyValuePair<TerrainColour, int> manaPair)
-        //{
-        //    var a = Mana[manaPair.Key] - manaPair.Value;
-        //    return new KeyValuePair<TerrainColour, int>
-        //    {
-        //        {manaPair.Key, a }
-        //    }
         }
     }
 }

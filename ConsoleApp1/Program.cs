@@ -19,7 +19,7 @@ namespace MTGGame
                 { TerrainColour.Green, 5}
             };
 
-            var card = new Card(manacost, "test", Terraincolour.Blue);
+            //var card = new Card(manacost, "test", Terraincolour.Blue);
 
         }
 

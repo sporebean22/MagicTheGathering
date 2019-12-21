@@ -6,7 +6,7 @@ namespace MagicTheGathering
 {
     public class Monster : Card
     {
-
+        public override Dictionary<TerrainColour, int> ManaCost { get; set; }
         public override string CardName { get; set; }
         public override TerrainColour TerrainColour { get; set; }
         private Narrator _narrator;
