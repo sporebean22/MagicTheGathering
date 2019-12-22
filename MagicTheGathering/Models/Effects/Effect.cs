@@ -8,7 +8,7 @@ namespace MagicTheGathering.Models
 
         public static Func<Card, int, string> Destruction { get; } = (card, value) => card.Destroy(value);
 
-        public static Func<Card, string> POP { get; } = (card) => card.Destroy(1);
+        public static Func<Card> POP { get; } = (card) => card.Destroy(1);
 
         public static Func<Effect, string> Negate { get; } = (effect) => Negation(effect);
 
