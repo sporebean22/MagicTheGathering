@@ -1,5 +1,5 @@
 ﻿using MagicTheGathering.Models;
-using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace MagicTheGathering
@@ -15,6 +15,7 @@ namespace MagicTheGathering
         public MonsterType MonsterType { get; set; }
         public static Effect Effect { get; set; }
 
+        [JsonConstructor]
         public Monster (Dictionary<TerrainColour, int>  manaCost, string cardName, MonsterType monsterType, TerrainColour terrainColour, int attack, int toughness) : base(manaCost, cardName, terrainColour)
         {
             ManaCost = manaCost;

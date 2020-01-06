@@ -9,7 +9,7 @@ namespace MTGGame
 {
     class Program
     {
-        private static INarrator narrator = new Narrator();
+        private static INarrator _narrator = new Narrator();
         private static IJsonManagement _jsonManagement = new JsonManagement();
         public const int _Lifepoints = 40;
 
@@ -25,7 +25,15 @@ namespace MTGGame
 
             var card2 = new Monster(new Effect("Burn"), manaCost, "Monsterboi", MonsterType.Dinosaur, TerrainColour.Black, 5,5 );
 
-            _jsonManagement.SaveToFile<Monster>(card2, $"{card2.CardName}");
+            Console.WriteLine(_narrator.NarrateBasicMonster(card2));
+
+            _jsonManagement.SaveToFile(card2, $"{card2.CardName}");
+
+            var test = _jsonManagement.RetrieveJson<Monster>("C:\\Users\\Dilan2814\\Source\\Repos\\sporebean22\\MagicTheGathering\\ConsoleApp1\\bin\\Debug\\netcoreapp3.0\\Students\\Monsterboi_Data.json");
+
+            Console.WriteLine(" ");
+
+            Console.WriteLine($"The Card is: {test.CardName} with a Type of: {test.MonsterType}");
 
         }
             
