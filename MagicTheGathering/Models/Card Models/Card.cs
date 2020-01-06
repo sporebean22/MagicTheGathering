@@ -1,10 +1,12 @@
 ﻿using System;
 using MagicTheGathering.Models.Card_Models;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace MagicTheGathering
 {
-    public abstract class Card : Permanent
+    [Serializable]
+    public abstract class Card : Permanent, ISerializable
     {
         public abstract Dictionary<TerrainColour, int> ManaCost { get; set; }
 
@@ -18,5 +20,11 @@ namespace MagicTheGathering
             CardName = cardname ?? throw new ArgumentNullException(nameof(cardname));
             TerrainColour = terrainColour;
         }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        { 
+        
+        }
+
     }
 }

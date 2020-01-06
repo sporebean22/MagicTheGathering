@@ -24,7 +24,7 @@ namespace MagicTheGathering
             Toughness = toughness;
         }
 
-        public Monster(Effect effect, Dictionary<TerrainColour, int> manaCost, string cardName, TerrainColour terrainColour, int attack, int toughness) : base(manaCost, cardName, terrainColour)
+        public Monster(Effect effect, Dictionary<TerrainColour, int> manaCost, string cardName, MonsterType monsterType, TerrainColour terrainColour, int attack, int toughness) : base(manaCost, cardName, terrainColour)
         {
             ManaCost = manaCost;
             CardName = cardName;
