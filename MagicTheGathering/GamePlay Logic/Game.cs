@@ -3,7 +3,7 @@ using MagicTheGathering.Models;
 using MTGGame;
 using System.Collections.Generic;
 
-public sealed partial class Game
+public sealed partial class Game : IGame
 {
     private readonly INarrator _narrator;
     public List<Player> Players { get; set; } = new List<Player>();

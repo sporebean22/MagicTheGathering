@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Web.Helpers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -25,5 +27,10 @@ namespace MagicTheGathering.Models.JsonManagement
             var jsonData = File.ReadAllText(fileDirectory);
             return JsonConvert.DeserializeObject<Type>(jsonData);
         }
+
+       /*public List<Type> JsonListTranslation<Type>(Json json)
+        { 
+            
+        }*/
     }
 }

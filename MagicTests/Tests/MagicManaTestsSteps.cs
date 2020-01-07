@@ -7,7 +7,6 @@ using MagicTheGathering.Models;
 namespace MagicVisioTests
 {
     [Binding]
-
     public class MagicManaTestsSteps
     {
         private INarrator _narrator = new Narrator();
