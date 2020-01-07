@@ -36,6 +36,18 @@ namespace MagicTheGathering.Models
             return String.Join(", ", card.ManaCost.Select(pair => $"{pair.Key}: {pair.Value}"));
         }
 
+        public string TranslateMana(Dictionary<TerrainColour, int> manaCost)
+        {
+            var manaSummary = new StringBuilder();
+
+            foreach (KeyValuePair<TerrainColour, int> terrainColour in manaCost)
+            {
+                manaSummary.Append($"{terrainColour.Key}: {terrainColour.Value}");
+            }
+
+            return String.Join(", ", manaCost.Select(pair => $"{pair.Key}: {pair.Value}"));
+        }
+
         public string GameStart(List<Player> players)
         {
             var gameStartMessage = new StringBuilder($"The Game has Started! The Players are: ");

@@ -1,11 +1,18 @@
 ﻿using TechTalk.SpecFlow;
 using System;
+using MagicTheGathering;
+using System.Collections.Generic;
+using MagicTheGathering.Models;
 
 namespace MagicVisioTests
 {
     [Binding]
+
     public class MagicManaTestsSteps
     {
+        private INarrator _narrator = new Narrator();
+        private Dictionary<TerrainColour, int> ManaCost { get; set; }
+
         [Given(@"I have Started a Game")]
         public void GivenIHaveStartedAGame()
         {
@@ -21,7 +28,7 @@ namespace MagicVisioTests
         [Then(@"the Mana Request Response Should look like:")]
         public void ThenTheManaRequestResponseShouldLookLike(Table table)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

@@ -11,6 +11,7 @@ namespace MagicTheGathering.Models
         string NarrateBasicMonster(Monster monster);
         string NarrateCardCast(Card card);
         string TranslateMana(Card card);
+        string TranslateMana(Dictionary<TerrainColour, int> manaCost);
         string GameStart(List<Player> players);
     }
 }

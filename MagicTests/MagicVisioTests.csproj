@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleApp1\MTGGame.csproj" />
+    <ProjectReference Include="..\MagicTheGathering\MagicTheGathering.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="MagicManaTests.feature.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
